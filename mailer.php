@@ -3,6 +3,7 @@ use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
 require 'vendor/autoload.php';
+$config = require '/home/findinternship/config.php';
 
 if ($_POST) {
     $to = "info@cihadcengiz.com"; // your mail here
