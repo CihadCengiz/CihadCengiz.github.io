@@ -23,7 +23,7 @@ if ($_POST) {
         $mail->Password   = $config['password'];
         $mail->SMTPSecure = $config['encryption'];
 
-        $mail->setFrom('webmaster@example.com', 'Webmaster');
+        $mail->setFrom('info@cihadcengiz.com', 'CihadCengiz.com');
         $mail->addAddress($to);
 
         $mail->isHTML(false); 
