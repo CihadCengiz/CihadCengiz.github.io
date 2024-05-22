@@ -15,7 +15,6 @@ if ($_POST) {
     $mail = new PHPMailer(true);
 
     try {
-        // SMTP ayarları
         $mail->isSMTP();
         $mail->Host       = $config['host'];
         $mail->Port       = $config['port'];
@@ -24,12 +23,10 @@ if ($_POST) {
         $mail->Password   = $config['password'];
         $mail->SMTPSecure = $config['encryption'];
 
-        // Alıcı ve gönderici bilgileri
         $mail->setFrom('webmaster@example.com', 'Webmaster');
         $mail->addAddress($to);
 
-        // İçerik
-        $mail->isHTML(false); // HTML değil, düz metin olarak gönder
+        $mail->isHTML(false); 
         $mail->Subject = $subject;
         $mail->Body    = "Name: $name\nE-mail: $email\nSubject: $subject\nMessage: $message";
 
